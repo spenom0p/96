@@ -1,0 +1,3301 @@
+1. Design a Form for Company Registration which includes all elements of form tag. Show 
+appropriate Form output in compatible browser and show when user clicks on submit 
+button, it will display: “Form submitted successfully
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+			background-image: url("paper.gif");
+ 			background-color: #cccccc;
+		}
+        }
+ 
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+ 
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+ 
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+ 
+    <form id="companyRegistrationForm">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required>
+ 
+        <label for="registrationNumber">Registration Number:</label>
+        <input type="text" id="registrationNumber" name="registrationNumber" required>
+ 
+        <label for="industry">Industry:</label>
+        <select id="industry" name="industry" required>
+            <option value="IT">Information Technology</option>
+            <option value="Finance">Finance</option>
+            <option value="Healthcare">Healthcare</option>
+            <!-- Add more options as needed -->
+        </select>
+ 
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" name="contactPerson" required>
+ 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+ 
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+ 
+    <script>
+        function submitForm() {
+            // You can add form validation logic here before displaying success message
+            alert("Form submitted successfully");
+        }
+    </script>
+ 
+</body>
+</html>
+ 
+ 
+ 
+2. Write a HTML Script using HTML tags and CSS features for Coffee: shop online web content. 
+Beautify content using coffee mag and relevant Images. Provide option for Selecting Coffee 
+type and Show Rate of Type of Coffee selection done.
+ 
+ 
+<!-- Create an HTML script for Coffee: shop online web content utilizing HTML 
+tags and CSS capabilities. Use a coffee cup and relevant images to enhance the 
+presentation. Provide a coffee type selection option, as well as a rate for the 
+coffee type pick. Tables should be used whenever possible -->
+ 
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Assignment 2a</title>
+    <link rel="stylesheet" href="style1.css">
+ 
+    <style>
+        body {
+            margin: 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: whitesmoke;
+        }
+ 
+        .topnav {
+            background-color: #8e5b44;
+            display: flex;
+            top: 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            width: 99.2%;
+            position: fixed;
+        }
+ 
+        .topnav p {
+            color: whitesmoke;
+            margin: 0;
+            padding: 10px 0;
+            padding-right: 25;
+            font-size: 35px;
+        }
+ 
+ 
+        .topnav a {
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 10px 5px;
+            font-size: 20px;
+        }
+ 
+        .topnav a:hover {
+            background-color: #643d2a;
+            color: white;
+ 
+        }
+ 
+        .topnav a.active {
+            background-color: #643d2a;
+ 
+        }
+ 
+        .main_image {
+            position: relative;
+            text-align: center;
+            color: whitesmoke;
+        }
+ 
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+        }
+ 
+        .centered_lower {
+            position: absolute;
+            top: 55%;
+            left: 14%;
+            transform: translate(-60%, 0%);
+            font-size: 20px;
+        }
+ 
+        .centered_lower_image {
+            position: absolute;
+            top: 60%;
+            left: 4.5%;
+            transform: translate(-60%, 0%);
+ 
+        }
+ 
+        ul {
+            list-style: none;
+        }
+ 
+        .coffee_list {
+            margin-left: 65px;
+            margin-bottom: 30px;
+            padding: 10;
+            border-radius: 10px;
+            background-color: #baada75c;
+            box-shadow: 0 2px 5px black;
+            /* text-align: left; */
+            display: inline-block;
+            width: 85%;
+        }
+ 
+        .coffee_list img {
+            margin-top: 20px;
+            float: right;
+        }
+ 
+ 
+ 
+        .coffee_list h3 {
+            color: #5d3a29;
+        }
+ 
+        .coffee_list p {
+ 
+            color: rgb(129, 74, 20);
+        }
+ 
+        .heading {
+            color: #5d3a29;
+            font-size: 40px;
+            text-align: center;
+        }
+ 
+        html {
+            scroll-behavior: smooth;
+        }
+ 
+        #contact {
+            margin: auto;
+            background-color: #baada75c;
+            padding-left: 15px;
+            padding: 15px;
+        }
+ 
+        .select_coffee {
+ 
+            background-color: #e0dbd9;
+            border-radius: 10px;
+            margin-left: 95px;
+            margin-bottom: 30px;
+            padding: 10;
+            width: 85%;
+            box-shadow: 0 2px 5px black;
+ 
+        }
+ 
+        .select_coffee select {
+            background-color: #e0dbd9;
+            margin-left: 800px;
+            margin-right: 0px;
+            font-size: 21px;
+            color: #814a14;
+            border: solid 0.1px #5d3a29;
+ 
+ 
+        }
+ 
+        .select_coffee th {
+            font-size: 25px;
+            color: #5d3a29;
+            padding: 10px
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="main_image">
+        <div class="topnav">
+            <p>Coffee Shop</p>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">About</a>
+            </div>
+        </div>
+        <div id=home>
+            <img src="coffeebeans.jpg" alt="backgroundimage" width="1394px" height="651px" margin-top=30px>
+        </div>
+        <div class="centered">Lorem ipsum</div>
+        <div class="centered_lower"> Lorem ipsum dolor sit amet</div>
+        <div>
+            <a href="#contact"><img class="centered_lower_image" width="20" height="20"
+                    src="https://img.icons8.com/ios/50/FFFFFF/instagram-new--v1.png" alt="instagram-new--v1" /></a>
+        </div>
+    </div>
+    <div id="menu">
+        <h3 class="heading">OUR MENU</h3>
+        <ul>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="espresso.png" alt="" width="90" height="90"></a>
+                <h3>Espresso @99/-</h3>
+                <p>A concentrated shot of coffee served in a small cup.</p>
+            </li>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="capu.png" alt="" width="90" height="90"></a>
+                <h3>Cappuccino @99/-</h3>
+                <p>Espresso with steamed milk and a layer of frothed milk on top.</p>
+            </li>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="latte.png" alt="" width="100" height="90"></a>
+                <h3>Latte @99/-</h3>
+                <p>Espresso with steamed milk and a small amount of frothed milk.</p>
+            </li>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="americano.png" alt="" width="90" height="90"></a>
+                <h3>Americano @99/-</h3>
+                <p>Espresso diluted with hot water.</p>
+            </li>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="mocha.png" alt="" width="90" height="90"></a>
+                <h3>Mocha @99/-</h3>
+                <p>Espresso with steamed milk, chocolate syrup, and topped with whipped cream.</p>
+            </li>
+            <li class="coffee_list">
+                <a href=""><img class="img" src="Macchiato.png" alt="" width="90" height="90"></a>
+                <h3>Macchiato @99/-</h3>
+                <p>Espresso with a small amount of foamed milk.</p>
+            </li>
+        </ul>
+    </div>
+ 
+    <div id="selection" class="select_coffee">
+        <table>
+            <tr>
+                <th>
+                    Select Coffee:
+                </th>
+                <th>
+                    <select>
+                        <option value="0">Espresso</option>
+                        <option value="1">Cappuccino</option>
+                        <option value="2">Latte</option>
+                        <option value="3">Americano</option>
+                        <option value="4">Mocha</option>
+                        <option value="5">Macchiato</option>
+                    </select>
+                </th>
+ 
+            </tr>
+        </table>
+    </div>
+ 
+    <div id="contact">
+        <h3>Contact us:</h3>
+        <p>
+            Email: emailid@coffeeshop.com
+        </p>
+        <p>
+            Instagram: @coffeeshop
+        </p>
+ 
+    </div>
+ 
+ 
+</body>
+ 
+</html>
+ 
+ 
+3.Write a HTML Script using HTML tags and CSS features for Car Service Centre: Beautify 
+Content using Different Car workshop images and Car accessories and show details of 
+various options for Car Servicing Packages
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Car Service</title>
+    <link rel="stylesheet" href="style1.css">
+ 
+    <style>
+        .header img {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-top: 12px;
+        }
+ 
+        .header h1 {
+            position: relative;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            left: 12px;
+            color: white;
+        }
+ 
+        .header {
+            background-color: #000000;
+            padding: 4px 8px;
+        }
+ 
+        .image {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+ 
+        .des {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+            width: 1920px;
+            height: 300px;
+        }
+ 
+        .tab {
+            margin-top: 10px;
+            margin-left: 250px;
+            border-style: outset;
+            border-radius: 20px;
+            box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-left: 15px;
+            padding-bottom: 12px;
+        }
+ 
+        td {
+            border: 1;
+        }
+    </style>
+</head>
+ 
+<body background="bg.jpg" style="background-size: 1500px 700px;">
+ 
+    <div class="header">
+        <img src="logo.png" alt="Car Service" style="width:50px; height: 50px;" />
+        <h1>CAR SERVICE</h1>
+    </div>
+    <br></br>
+    </br>
+    <table class="tab" border="0" cellspacing="0" cellpadding="8" align="center" style="width: 400px; height: 400px;">
+        <!-- <tr>
+            <td colspan="2" align="left">
+            </td>
+        </tr> -->
+        <tr>
+            <td colspan="2" align="center">
+                <h2>Owner and Car Details</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="username">Owner Name:</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>
+                <label for="username">Contact no. :</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username" placeholder="Enter your number">
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>City</td>
+            <td>
+                <select>
+                    <option> Pune </option>
+                    <option> Mumbai </option>
+                    <option> Thane </option>
+                    <option> Goa </option>
+                    <option> Banglore </option>
+                    <option> Delhi </option>
+                </select>
+            </td>
+ 
+        </tr>
+ 
+        <tr>
+            <td>
+                <label for="username">Email:</label>
+            </td>
+            <td>
+                <input type="email" id="username" name="username" placeholder="Enter your email">
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>
+                <label for="username">Car type:</label>
+            <td>
+                <input type="radio" name="gender" value="Public">Sedan
+                <input type="radio" name="gender" value="Public">Hatchback
+                <input type="radio" name="gender" value="Public">SUV
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>
+                <label for="password">Car no.:</label>
+            </td>
+            <td>
+                <input type="text" id="password" name="number" placeholder="eg- MH 12 FA 1234">
+            </td>
+        </tr>
+ 
+        <tr>
+            <td colspan="2" align="center" style="padding-top: 20px;">
+                <input type="submit" value="Sign Up">
+            </td>
+        </tr>
+    </table>
+</body>
+ 
+</html>
+ 
+ 
+ 
+4. Write a HTML Script using HTML tags and CSS features for Flower Shop: Using CSS Selectors 
+and Beautification Options show Output with various types of flower images and available 
+stock of flowers in floweriest shop
+ 
+ 
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 2b - Flower Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #ebfffd;
+ 
+        }
+ 
+        .navbar {
+            display: flex;
+            background-color: #ebfffd;
+            margin-top: 15px;
+            /* padding: 25px; */
+            align-items: center;
+            /* justify-content: center; */
+            box-shadow: 0 2px 5px black;
+            width: 100%;
+            border-radius: 50px;
+ 
+        }
+ 
+        .navbar .logo {
+            text-align: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            color: #4c5b59;
+            font-weight: bold;
+            font-size: 20px;
+ 
+        }
+ 
+        .navbar .bartext {
+            /* flex: 1; */
+            padding-left: 450;
+        }
+ 
+        .navbar a {
+            text-decoration: none;
+            padding: 5px;
+            color: black;
+        }
+ 
+        .loginbutton {
+            background-color: #4c5b59;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 500px;
+        }
+ 
+        .menucontainer {
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 0px;
+            /* border: 5px solid #4c5b59;
+    border-radius: 2px; */
+            text-align: center;
+ 
+        }
+ 
+        table {
+            max-width: 55px;
+            max-height: 65px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            border-spacing: 20px;
+ 
+        }
+ 
+        td {
+            padding: 5px;
+            border: 2px solid #4c5b59;
+            border-radius: 5px;
+            cursor: pointer;
+ 
+        }
+ 
+        .menu {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            font-size: 35px;
+            color: #4c5b59;
+            text-decoration: underline;
+        }
+ 
+        .menu:hover {
+            cursor: pointer;
+        }
+ 
+        .flowerbutton {
+            background-color: #4c5b59;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+ 
+        .zoom img {
+ 
+            transition: 0.3s all ease-in-out;
+        }
+ 
+        .zoom:hover img {
+            transform: scale(1.09);
+        }
+ 
+        #contact {
+            margin-top: 50px;
+            background-color: #4c5b59;
+            padding-left: 15px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+ 
+ 
+<body>
+    <div class="navbar">
+        <p class="logo">Flower Shop</p>
+        <div class="bartext">
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#category">Category</a>
+        </div>
+        <button class="loginbutton" type="submit">Sign in</button>
+    </div>
+ 
+ 
+    <center>
+        <h3 class='menu' id='category'>Our Menu</h3>
+    </center>
+    <div class="menucontainer">
+        <table>
+            <tr>
+                <td>
+                    <div class="zoom">
+                        <img src="Daisy.png" alt="" width="250">
+                    </div>
+                    <button class="flowerbutton" type="button">Daisy @99/-</button>
+                    <!-- Daisy -->
+                </td>
+                <td>
+                    <div class="zoom">
+                        <img src="Rose.png" alt="" width="250">
+                    </div>
+ 
+                    <button class="flowerbutton" type="button">Rose @99/-</button>
+                    <!-- Rose -->
+                </td>
+                <td>
+                    <div class="zoom">
+                        <img src="Sunflower.png" alt="" width="250">
+                    </div>
+                    <button class="flowerbutton" type="button">Sun Flower @99/-</button>
+                    <!-- Sunflower -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="zoom">
+                        <img src="orchid.png" alt="" width="250">
+                    </div>
+                    <button class="flowerbutton" type="button">Orchid @99/-</button>
+                    <!-- Orchid -->
+                </td>
+                <td>
+                    <div class="zoom">
+                        <img src="poppy.png" alt="" width="250">
+                    </div>
+ 
+                    <button class="flowerbutton" type="button">Poppy @99/-</button>
+                    <!-- oppy -->
+                </td>
+                <td>
+                    <div class="zoom">
+                        <img src="tulip.png" alt="" width="250">
+                    </div>
+ 
+                    <button class="flowerbutton" type="button">Tulip @99/-</button>
+                    <!-- Tulip -->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="contact">
+        <h3>Contact us:</h3>
+        <p>
+            Email: emailid@flowereshop.com
+        </p>
+        <p>
+            Instagram: @flowershop
+        </p>
+ 
+    </div>
+ 
+</body>
+ 
+</html>
+ 
+ 
+5. Write a Java Script to accept Two Numbers from User and Print their Addition, Subtraction, 
+Multiplication and Division. Make Use of Prompt function and display result on Browser’s 
+Screen
+ 
+ 
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Simple Calculator</title>
+</head>
+ 
+<body>
+ 
+  <script>
+    // Prompt the user for the first number
+    var num1 = prompt("Enter the first number:");
+ 
+    // Prompt the user for the second number
+    var num2 = prompt("Enter the second number:");
+ 
+    // Convert the input strings to numbers
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+ 
+    // Check if the input is valid
+    //The isNaN function stands for "is Not a Number." It returns true if the argument is NaN (not a number) and false otherwise.
+    if (isNaN(num1) || isNaN(num2)) {
+      document.write("Invalid input. Please enter valid numbers.");
+    } else {
+      // Perform the operations
+      var addition = num1 + num2;
+      var subtraction = num1 - num2;
+      var multiplication = num1 * num2;
+      var division = num1 / num2;
+ 
+      // Display the results on the browser's screen
+      document.write("Addition: " + addition + "<br>");
+      document.write("Subtraction: " + subtraction + "<br>");
+      document.write("Multiplication: " + multiplication + "<br>");
+      document.write("Division: " + division + "<br>");
+    }
+  </script>
+ 
+</body>
+ 
+</html>
+ 
+ 
+6. 
+1.] Write a Java Script to Accept 3 Number from user using Prompt function and show result 
+as Largest of three on browser’s screen
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Largest of Three Numbers</title>
+</head>
+ 
+<body>
+ 
+  <script>
+    // Prompt the user for three numbers
+    var num1 = prompt("Enter the first number:");
+    var num2 = prompt("Enter the second number:");
+    var num3 = prompt("Enter the third number:");
+ 
+    // Convert the input strings to numbers
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    num3 = parseFloat(num3);
+ 
+    // Check if the input is valid
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+      document.write("Invalid input. Please enter valid numbers.");
+    } else {
+      // Find the largest of the three numbers
+      var largest = Math.max(num1, num2, num3);
+ 
+      // Display the result on the browser's screen
+      document.write("The largest of the three numbers is: " + largest);
+    }
+  </script>
+ 
+</body>
+ 
+</html>
+ 
+2]2.] Write a Java Script to display sum of integers for entered numbers on browsers screen (e. 
+g. if users input 10 then result will be 0+1+2+3+4+5+6+7+8+9+10=55
+ 
+ 
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Sum of Integers</title>
+</head>
+ 
+<body>
+ 
+  <script>
+    // Prompt the user for a number
+    var userInput = prompt("Enter a number:");
+ 
+    // Convert the input string to a number
+    var num = parseInt(userInput);
+ 
+    // Check if the input is valid
+    if (isNaN(num)) {
+      document.write("Invalid input. Please enter a valid number.");
+    } else {
+      // Calculate the sum of integers from 0 to num
+      var sum = 0;
+      for (var i = 0; i <= num; i++) {
+        sum += i;
+      }
+ 
+      // Display the result on the browser's screen
+      document.write("The sum of integers from 0 to " + num + " is: " + sum);
+    }
+  </script>
+ 
+</body>
+ 
+</html>
+ 
+ 
+7.  Write a Java Script to Display Entered Array on Browsers Screen. perform Following 
+operation and show updated content 
+a. 1. Display Entered Array 
+b. 2. Display Entered array in Ascending order 
+c. 3. Push element 25 
+d. 4. Display Updated Array 
+e. 5. Print Length of Array 
+f. 6. Show Element at Position No 3
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+ 
+<body>
+ 
+    <script>
+        // Function to prompt the user for an array
+        function getArrayFromUser() {
+            let inputArray = prompt("Enter elements of the array separated by commas (e.g., 10, 5, 8, 15, 20):");
+            return inputArray.split(',').map(Number);
+        }
+ 
+        // Initialize an array by taking input from the user
+        let myArray = getArrayFromUser();
+ 
+        // Function to display the array
+        function displayArray() {
+            document.write("a. Entered Array: " + myArray.join(", ") + "<br>");
+        }
+ 
+        // Function to display the array in ascending order
+        function displayAscendingOrder() {
+            document.write("b. Array in Ascending Order: " + myArray.slice().sort((a, b) => a - b).join(", ") + "<br>");
+        }
+ 
+        // Function to push element 25
+        function pushElement() {
+            myArray.push(25);
+            document.write("c. Element 25 pushed to the array.<br>");
+        }
+ 
+        // Function to display the updated array
+        function displayUpdatedArray() {
+            document.write("d. Updated Array: " + myArray.join(", ") + "<br>");
+        }
+ 
+        // Function to print the length of the array
+        function printArrayLength() {
+            document.write("e. Length of the Array: " + myArray.length + "<br>");
+        }
+ 
+        // Function to show the element at position 3
+        function showElementAtPosition3() {
+            document.write("f. Element at Position 3: " + myArray[2] + "<br>");
+        }
+ 
+        // Perform the operations and display the results
+        displayArray();
+        displayAscendingOrder();
+        pushElement();
+        displayUpdatedArray();
+        printArrayLength();
+        showElementAtPosition3();
+    </script>
+ 
+</body>
+ 
+</html>
+ 
+ 
+ 
+ 
+8. . Write a Java Script to display Multiplication table of entered values of rows and columns as 
+follows
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Multiplication Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px;
+    }
+ 
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+ 
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <h2>Enter the number of rows and columns:</h2>
+ 
+  <label for="rows">Rows:</label>
+  <input type="number" id="rows" name="rows" min="1" value="5">
+ 
+  <label for="columns">Columns:</label>
+  <input type="number" id="columns" name="columns" min="1" value="5">
+ 
+  <button onclick="generateTable()">Generate Table</button>
+ 
+  <h2>Multiplication Table</h2>
+ 
+  <div id="tableContainer"></div>
+ 
+  <script>
+    function generateTable() {
+      // Get the values of rows and columns
+      var rows = document.getElementById("rows").value;
+      var columns = document.getElementById("columns").value;
+ 
+      // Create the table element
+      var table = document.createElement("table");
+ 
+      // Create table header row
+      var headerRow = document.createElement("tr");
+      for (var i = 1; i <= columns; i++) {
+        var th = document.createElement("th");
+        th.textContent = i;
+        headerRow.appendChild(th);
+      }
+      table.appendChild(headerRow);
+ 
+      // Create table content
+      for (var i = 1; i <= rows; i++) {
+        var row = document.createElement("tr");
+        for (var j = 1; j <= columns; j++) {
+          var cell = document.createElement("td");
+          cell.textContent = i * j;
+          row.appendChild(cell);
+        }
+        table.appendChild(row);
+      }
+ 
+      // Display the table
+      var tableContainer = document.getElementById("tableContainer");
+      tableContainer.innerHTML = "";
+      tableContainer.appendChild(table);
+    }
+  </script>
+ 
+</body>
+ 
+</html>
+ 
+9.Write a JavaScript Code to take color value from user and apply color to background. Use of 
+Div tag is mandatory
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+ 
+<body>
+    <label for="colorInput">Enter a color:</label>
+    <input type="color" id="colorInput">
+    <button onclick="changeColor()">Change Color</button>
+ 
+    <div id="colorDiv"></div>
+ 
+    <script>
+        function changeColor() {
+            // Get the color value from the input
+            var colorValue = document.getElementById('colorInput').value;
+ 
+            // Apply the color to the background of the div
+            document.getElementById('colorDiv').style.backgroundColor = colorValue;
+        }
+    </script>
+</body>
+ 
+</html>
+ 
+ 
+10. 
+ 
+Write a JavaScript function that checks whether a Entered string is palindrome or not? 
+(Make use of Prompt function to take input)
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <script>
+        function isPalindrome(str) {
+            // Remove non-alphanumeric characters and convert to lowercase
+            const cleanStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+ 
+            // Compare the original string with its reverse
+            return cleanStr === cleanStr.split('').reverse().join('');
+        }
+ 
+        function checkPalindrome() {
+            // Use prompt to get user input
+            const userInput = prompt("Enter a string:");
+ 
+            // Check if the entered string is a palindrome
+            if (userInput !== null) {
+                if (isPalindrome(userInput)) {
+                    alert(`${userInput} is a palindrome.`);
+                } else {
+                    alert(`${userInput} is not a palindrome.`);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+ 
+    <h1>Palindrome Checker</h1>
+    <p>Enter a string to check if it is a palindrome:</p>
+ 
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+ 
+</body>
+</html>
+ 
+ 
+ 
+11.A) Write a JavaScript function to add rows to a table
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Rows to Table</title>
+</head>
+<body>
+ 
+    <table id="myTable" border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </table>
+ 
+    <script>
+        function addRow() {
+            // Get input from the user
+            var name = prompt("Enter name:");
+            var email = prompt("Enter email:");
+ 
+            // Get the table reference
+            var table = document.getElementById("myTable");
+ 
+            // Insert a new row at the end of the table
+            var newRow = table.insertRow(-1);
+ 
+            // Insert cells into the new row
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+ 
+            // Set the innerHTML of cells with user input
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+        }
+    </script>
+ 
+    <button onclick="addRow()">Add Row</button>
+ 
+</body>
+</html>
+ 
+B) Write a JavaScript program to find the area of a triangle where lengths of the three of its 
+sides are 5, 6, 7
+ 
+<!-- B) Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7. -->
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Triangle Area Calculation</title>
+</head>
+ 
+<body>
+ 
+  <script>
+    // Function to calculate the area of a triangle given its side lengths
+    function calculateTriangleArea(side1, side2, side3) {
+      // Using Heron's formula to calculate the area
+      var s = (side1 + side2 + side3) / 2;
+      var area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+      return area;
+    }
+ 
+    // Given side lengths of the triangle
+    var side1 = 5;
+    var side2 = 6;
+    var side3 = 7;
+ 
+    // Calculate and display the area
+    var triangleArea = calculateTriangleArea(side1, side2, side3);
+    document.write("The area of the triangle is: " + triangleArea);
+  </script>
+ 
+</body>
+ 
+</html>
+ 
+ 
+12. Write a PHP script for numeric, associative and multidimensional array and perform all 
+sorting functions on it.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeric, associative and multidimensional array using foreach loop in PHP</title>
+</head>
+<body>
+    <?php
+        echo "<h3>Number Array</h3>";
+ 
+        $number_array = [1, 5, 3, 4, 2, 7, 6];
+        sort($number_array); // Sorting in ascending order
+ 
+        foreach ($number_array as $num) {
+            echo "$num <br>";
+        }
+ 
+        echo "<h3>Associative Array</h3>";
+ 
+        $associative_array = ["Name" => "ABC", "Age" => "20", "City" => "Mumbai"];
+        ksort($associative_array); // Sorting associative array based on keys in ascending order
+ 
+        foreach ($associative_array as $a => $a_value) {
+           echo "$a: $a_value<br>";
+        }
+ 
+        echo "<h3>Multidimensional Array</h3>";
+ 
+        $multidimensionalArray = array(
+            array("name" => "Alice", "age" => 25),
+            array("name" => "Bob", "age" => 35),
+            array("name" => "Charlie", "age" => 30)
+        );
+ 
+        // Sorting multidimensional array based on 'age' key in ascending order
+        usort($multidimensionalArray, function ($a, $b) {
+            return $a["age"] - $b["age"];
+        });
+ 
+        foreach ($multidimensionalArray as $person) {
+            echo "Name: " . $person["name"] . ", Age: " . $person["age"] . "<br>";
+        }
+    ?>
+</body>
+</html>
+ 
+ 
+ 
+ 
+13.Design a company registration form having the following fields = [companyID, 
+companyName, Location, Department]. Write a PHP script to display all the registered 
+companies and provide a search bar for searching the companies located in a specific city.
+ 
+ 
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Company Registration Form</title>
+</head>
+ 
+<body>
+ 
+  <h2>Company Registration Form</h2>
+ 
+  <form method="post" action="">
+    Company ID: <input type="text" name="companyID" required><br>
+    Company Name: <input type="text" name="companyName" required><br>
+    Location: <input type="text" name="location" required><br>
+    Department: <input type="text" name="department" required><br>
+    <input type="submit" name="submit" value="Register Company">
+  </form>
+ 
+  <?php
+  session_start();
+ 
+  // Check if the form is submitted
+  if (isset($_POST['submit'])) {
+    // Get form data
+    $companyID = $_POST['companyID'];
+    $companyName = $_POST['companyName'];
+    $location = $_POST['location'];
+    $department = $_POST['department'];
+ 
+    // Store the form data in the session (you might want to use a database in a real-world scenario)
+    $_SESSION['registeredCompanies'][] = array(
+      'companyID' => $companyID,
+      'companyName' => $companyName,
+      'location' => $location,
+      'department' => $department
+    );
+  }
+ 
+  // Display all registered companies
+  echo "<h2>Registered Companies</h2>";
+  if (isset($_SESSION['registeredCompanies'])) {
+    echo "<table border='1'>";
+    echo "<tr><th>Company ID</th><th>Company Name</th><th>Location</th><th>Department</th></tr>";
+ 
+    foreach ($_SESSION['registeredCompanies'] as $company) {
+      echo "<tr>";
+      echo "<td>{$company['companyID']}</td>";
+      echo "<td>{$company['companyName']}</td>";
+      echo "<td>{$company['location']}</td>";
+      echo "<td>{$company['department']}</td>";
+      echo "</tr>";
+    }
+ 
+    echo "</table>";
+  }
+ 
+  // Search bar for companies located in a specific city
+  echo "<h2>Search Companies by Name</h2>";
+  echo "<form method='get' action=''>";
+  echo "Search by Company Name: <input type='text' name='searchCompanyName'>";
+  echo "<input type='submit' name='search' value='Search'>";
+  echo "</form>";
+ 
+  if (isset($_GET['search']) && isset($_GET['searchCompanyName'])) {
+    $searchCompanyName = $_GET['searchCompanyName'];
+    echo "<h3>Companies with the name '$searchCompanyName':</h3>";
+ 
+    if (isset($_SESSION['registeredCompanies'])) {
+      foreach ($_SESSION['registeredCompanies'] as $company) {
+        if (strcasecmp($company['companyName'], $searchCompanyName) === 0) {
+          echo "{$company['companyName']} ({$company['location']})<br>";
+        }
+      }
+    }
+  }
+  ?>
+ 
+</body>
+ 
+</html>
+ 
+ 
+ 
+ 
+14.
+Design a company registration form having the following fields = [companyID, 
+companyName, Location, Department, RegistrationDate]. 
+Write a PHP script to display the company details registered before 18th May 2023
+ 
+<?php
+session_start();
+ 
+// Check if the form is submitted
+if (isset($_POST['submit'])) {
+    // Get form data
+    $companyID = $_POST['companyID'];
+    $companyName = $_POST['companyName'];
+    $location = $_POST['location'];
+    $department = $_POST['department'];
+    $registrationDate = $_POST['registrationDate'];
+ 
+    // Store the form data in the session
+    $_SESSION['registeredCompanies'][] = array(
+        'companyID' => $companyID,
+        'companyName' => $companyName,
+        'location' => $location,
+        'department' => $department,
+        'registrationDate' => $registrationDate
+    );
+}
+ 
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Form</title>
+</head>
+<body>
+ 
+<h2>Company Registration Form</h2>
+ 
+<form method="post" action="">
+    Company ID: <input type="text" name="companyID" required><br>
+    Company Name: <input type="text" name="companyName" required><br>
+    Location: <input type="text" name="location" required><br>
+    Department: <input type="text" name="department" required><br>
+    Registration Date: <input type="date" name="registrationDate" required><br>
+    <input type="submit" name="submit" value="Register Company">
+</form>
+ 
+<?php
+// Display all registered companies
+echo "<h2>Registered Companies</h2>";
+if (isset($_SESSION['registeredCompanies'])) {
+    echo "<table border='1'>";
+    echo "<tr><th>Company ID</th><th>Company Name</th><th>Location</th><th>Department</th><th>Registration Date</th></tr>";
+ 
+    foreach ($_SESSION['registeredCompanies'] as $company) {
+        echo "<tr>";
+        echo "<td>{$company['companyID']}</td>";
+        echo "<td>{$company['companyName']}</td>";
+        echo "<td>{$company['location']}</td>";
+        echo "<td>{$company['department']}</td>";
+        echo "<td>{$company['registrationDate']}</td>";
+        echo "</tr>";
+    }
+ 
+    echo "</table>";
+}
+ 
+// Filter and display companies registered before 18th May 2023
+echo "<h2>Companies Registered Before 18th May 2023</h2>";
+if (isset($_SESSION['registeredCompanies'])) {
+    echo "<table border='1'>";
+    echo "<tr><th>Company ID</th><th>Company Name</th><th>Location</th><th>Department</th><th>Registration Date</th></tr>";
+ 
+    foreach ($_SESSION['registeredCompanies'] as $company) {
+        // Compare registration date with 18th May 2023
+        if (strtotime($company['registrationDate']) < strtotime('2023-05-18')) {
+            echo "<tr>";
+            echo "<td>{$company['companyID']}</td>";
+            echo "<td>{$company['companyName']}</td>";
+            echo "<td>{$company['location']}</td>";
+            echo "<td>{$company['department']}</td>";
+            echo "<td>{$company['registrationDate']}</td>";
+            echo "</tr>";
+        }
+    }
+ 
+    echo "</table>";
+}
+?>
+ 
+</body>
+</html>
+ 
+ 
+ 
+15.Design students admission form having the following fields 
+=[studentID,studentName,emailID,12thGrade,JEEScore] Write a PHP script to display top 5 
+students based on JEEScore.
+ 
+ 
+<!-- Design students admission form having the following fields =[studentID,studentName,emailID,12thGrade,JEEScore] Write a PHP script to display top 5 students based on JEEScore. -->
+<?php
+session_start();
+ 
+// Check if the form is submitted
+if (isset($_POST['submit'])) {
+    // Get form data
+    $studentID = $_POST['studentID'];
+    $studentName = $_POST['studentName'];
+    $emailID = $_POST['emailID'];
+    $grade12 = $_POST['12thGrade'];
+    $jeeScore = $_POST['JEEScore'];
+ 
+    // Store the form data in the session
+    $_SESSION['studentData'][] = array(
+        'studentID' => $studentID,
+        'studentName' => $studentName,
+        'emailID' => $emailID,
+        '12thGrade' => $grade12,
+        'JEEScore' => $jeeScore
+    );
+}
+ 
+// Display the admission form
+echo "<h2>Student Admission Form</h2>";
+ 
+echo "<form method='post' action=''>";
+echo "Student ID: <input type='text' name='studentID' required><br>";
+echo "Student Name: <input type='text' name='studentName' required><br>";
+echo "Email ID: <input type='email' name='emailID' required><br>";
+echo "12th Grade: <input type='text' name='12thGrade' required><br>";
+echo "JEE Score: <input type='text' name='JEEScore' required><br>";
+echo "<input type='submit' name='submit' value='Submit'>";
+echo "</form>";
+ 
+// Display top 5 students based on JEE score
+echo "<h2>Top 5 Students Based on JEE Score</h2>";
+if (isset($_SESSION['studentData'])) {
+    // Sort students based on JEE score in descending order
+    usort($_SESSION['studentData'], function ($a, $b) {
+        return $b['JEEScore'] - $a['JEEScore'];
+    });
+ 
+    echo "<table border='1'>";
+    echo "<tr><th>Student ID</th><th>Student Name</th><th>Email ID</th><th>12th Grade</th><th>JEE Score</th></tr>";
+ 
+    // Display top 5 students
+    for ($i = 0; $i < min(5, count($_SESSION['studentData'])); $i++) {
+        $student = $_SESSION['studentData'][$i];
+        echo "<tr>";
+        echo "<td>{$student['studentID']}</td>";
+        echo "<td>{$student['studentName']}</td>";
+        echo "<td>{$student['emailID']}</td>";
+        echo "<td>{$student['12thGrade']}</td>";
+        echo "<td>{$student['JEEScore']}</td>";
+        echo "</tr>";
+    }
+ 
+    echo "</table>";
+}
+// The `usort` function is used to sort an array. In this case, it's sorting the 'studentData' array stored in the session.
+ 
+// The sorting is done based on the JEE score, and the function used for comparison subtracts the JEE score of student B from the JEE score of student A.
+ 
+// If the result is positive, it means student A has a higher JEE score and should come before student B in the sorted array.
+ 
+// If the result is negative, it means student B has a higher JEE score and should come before student A in the sorted array.
+ 
+// If the result is zero, it means both students have the same JEE score, and their order in the array remains unchanged.
+ 
+// In summary, the array is sorted in descending order based on JEE score.
+ 
+// The sorting function is an anonymous function defined using the `function ($a, $b)` syntax.
+// The function receives two elements from the array (representing two students), and it returns a value indicating their relative order.
+// The `return $b['JEEScore'] - $a['JEEScore'];` line specifies the comparison based on JEE score.
+ 
+// After this sorting operation, the 'studentData' array is modified in place to be in descending order based on JEE score.
+ 
+?>
+ 
+ 
+ 
+16.Create the database table with the entries mentioned: [rollNo, studName, studDept, 
+passingYear, classGrades] Grades should be either {First Class, Second Class, Pass} Design the 
+UI as given below and show the appropriate result through PHP script
+ 
+ 
+INDEX
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Student Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+ 
+        h2 {
+            color: #333;
+        }
+ 
+        form {
+            margin-bottom: 20px;
+        }
+ 
+        label {
+            font-weight: bold;
+        }
+ 
+        select,
+        input[type="radio"],
+        input[type="submit"] {
+            margin-bottom: 10px;
+        }
+ 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+ 
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
+        }
+ 
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+ 
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+ 
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+    <h2>Search Students</h2>
+    <form action="process.php" method="post">
+        <label for="year">Select Year:</label>
+        <select name="year" id="year">
+            <!-- Options for years, populate these dynamically from the database -->
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+ 
+        <br><br>
+ 
+        <label>Select Class:</label>
+        <input type="radio" name="class" value="First Class">First Class
+        <input type="radio" name="class" value="Second Class">Second Class
+        <input type="radio" name="class" value="all">All
+ 
+        <br><br>
+ 
+        <input type="submit" value="Search">
+    </form>
+</body>
+ 
+</html>
+ 
+ 
+ 
+PROCESS.PHP
+ 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+ 
+    h2 {
+        color: #333;
+    }
+ 
+    form {
+        margin-bottom: 20px;
+    }
+ 
+    label {
+        font-weight: bold;
+    }
+ 
+    select,
+    input[type="radio"],
+    input[type="submit"] {
+        margin-bottom: 10px;
+    }
+ 
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+ 
+    th,
+    td {
+        border: 1px solid #333;
+        padding: 12px;
+        text-align: left;
+    }
+ 
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+ 
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+ 
+    tr:hover {
+        background-color: #ddd;
+    }
+</style>
+<?php
+// Establish a database connection (assuming you have db credentials defined)
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$database = "mydb";
+ 
+$conn = new mysqli($servername, $username, $password, $database);
+ 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+// Retrieve user inputs from the form
+$year = $_POST['year'];
+$class = $_POST['class'];
+ 
+// Construct SQL query based on user selections
+if ($class === 'all') {
+    $sql = "SELECT * FROM students WHERE passingYear = $year";
+} else {
+    $sql = "SELECT * FROM students WHERE passingYear = $year AND classGrades = '$class'";
+}
+ 
+// Execute the query
+$result = $conn->query($sql);
+ 
+// Display the results
+if ($result->num_rows > 0) {
+    echo "<h2>Search Results:</h2>";
+    echo "<table border='1'><tr><th>Roll No</th><th>Student Name</th><th>Department</th><th>Passing Year</th><th>Class Grade</th></tr>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr><td>{$row['rollNo']}</td><td>{$row['studName']}</td><td>{$row['studDept']}</td><td>{$row['passingYear']}</td><td>{$row['classGrades']}</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "No results found.";
+}
+ 
+// Close the database connection
+$conn->close();
+?>
+ 
+ 
+SQL
+ 
+CREATE TABLE students (
+    rollNo INT PRIMARY KEY,
+    studName VARCHAR(255),
+    studDept VARCHAR(255),
+    passingYear INT,
+    classGrades VARCHAR(50)
+);
+ 
+INSERT INTO students (rollNo, studName, studDept, passingYear, classGrades) VALUES
+(1, 'Alice Johnson', 'Computer Science', 2021, 'First Class'),
+(2, 'Bob Smith', 'Engineering', 2022, 'Second Class'),
+(3, 'Charlie Brown', 'Physics', 2023, 'Pass'),
+(4, 'David Lee', 'Mathematics', 2022, 'First Class'),
+(5, 'Eva Davis', 'Chemistry', 2021, 'Second Class'),
+(6, 'Frank White', 'Biology', 2023, 'Pass');
+ 
+ 
+ 
+17.Develop a system to keep a record of student-mentor meetings. Student_Mentor = 
+[studRollNo, studClass, studName, studContact, MentorName, issuesDiscussed] 
+Perform the following operations: 
+a. Insert the record; 
+b. Display the records only if the student is absent
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Mentor Record System</title>
+</head>
+<body>
+ 
+<h1>Student-Mentor Record System</h1>
+ 
+<!-- Insert Record Form -->
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <label for="studRollNo">Roll No:</label>
+    <input type="text" name="studRollNo" required><br>
+ 
+    <label for="studClass">Class:</label>
+    <input type="text" name="studClass" required><br>
+ 
+    <label for="studName">Name:</label>
+    <input type="text" name="studName" required><br>
+ 
+    <label for="studContact">Contact:</label>
+    <input type="text" name="studContact" required><br>
+ 
+    <label for="MentorName">Mentor Name:</label>
+    <input type="text" name="MentorName" required><br>
+ 
+    <label for="issuesDiscussed">Issues Discussed:</label>
+    <input type="text" name="issuesDiscussed" required><br>
+ 
+    <input type="submit" value="Insert Record">
+</form>
+ 
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "mydb";
+ 
+    // Establish a connection to the database
+    $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+    // Check the connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+ 
+    // Prepare and bind the SQL statement
+    $sql = "INSERT INTO student_mentor_records (studRollNo, studClass, studName, studContact, MentorName, issuesDiscussed) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssss", $studRollNo, $studClass, $studName, $studContact, $MentorName, $issuesDiscussed);
+ 
+    // Set parameters from the form data
+    $studRollNo = $_POST['studRollNo'];
+    $studClass = $_POST['studClass'];
+    $studName = $_POST['studName'];
+    $studContact = $_POST['studContact'];
+    $MentorName = $_POST['MentorName'];
+    $issuesDiscussed = $_POST['issuesDiscussed'];
+ 
+    // Execute the statement
+    if ($stmt->execute()) {
+        echo "Record inserted successfully";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+ 
+    // Close the statement and connection
+    $stmt->close();
+    $conn->close();
+}
+?>
+ 
+<hr>
+ 
+<!-- Display Records for Absent Students -->
+<h2>Records for Absent Students</h2>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "mydb";
+ 
+// Establish a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
+ 
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+// Display records for absent students
+$sqlAbsent = "SELECT * FROM student_mentor_records WHERE issuesDiscussed = 'absent'";
+$resultAbsent = $conn->query($sqlAbsent);
+ 
+if (!$resultAbsent) {
+    die("Query failed: " . $conn->error);
+}
+ 
+if ($resultAbsent->num_rows > 0) {
+    // Output data of each row
+    while($row = $resultAbsent->fetch_assoc()) {
+        echo "Roll No: " . $row["studRollNo"]. " - Name: " . $row["studName"]. " - Class: " . $row["studClass"]. "<br>";
+    }
+} else {
+    echo "No records found for absent students";
+}
+ 
+$conn->close();
+?>
+<hr>
+ 
+<!-- Display All Records -->
+<h2>All Records</h2>
+<?php
+// Establish a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
+ 
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+// Display all records
+$sqlAll = "SELECT * FROM student_mentor_records";
+$resultAll = $conn->query($sqlAll);
+ 
+if (!$resultAll) {
+    die("Query failed: " . $conn->error);
+}
+ 
+if ($resultAll->num_rows > 0) {
+    // Output data of each row
+    while($row = $resultAll->fetch_assoc()) {
+        echo "Roll No: " . $row["studRollNo"]. " - Name: " . $row["studName"]. " - Class: " . $row["studClass"]. "<br>";
+    }
+} else {
+    echo "No records found";
+}
+ 
+$conn->close();
+?>
+ 
+</body>
+</html>
+ 
+<!-- SQL -->
+<!-- use mydb;
+CREATE TABLE student_mentor_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    studRollNo VARCHAR(10) NOT NULL,
+    studClass VARCHAR(10) NOT NULL,
+    studName VARCHAR(50) NOT NULL,
+    studContact VARCHAR(20) NOT NULL,
+    MentorName VARCHAR(50) NOT NULL,
+    issuesDiscussed VARCHAR(100) NOT NULL
+); -->
+ 
+ 
+ 
+18. Develop a sports registration form having the following fields = [playerID, playerName, 
+gameGenre, score]. 
+Write a PHP script to display players with the highest score in cricket.
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Registration</title>
+</head>
+ 
+<body>
+ 
+    <?php
+    // Connection parameters
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "mydb";
+ 
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+ 
+    // Handle form submission
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Assuming you have a form with fields playerID, playerName, gameGenre, and score
+        $playerName = $_POST["playerName"];
+        $gameGenre = $_POST["gameGenre"];
+        $score = $_POST["score"];
+ 
+        // Insert data into the players table
+        $sql = "INSERT INTO players (playerName, gameGenre, score) VALUES ('$playerName', '$gameGenre', '$score')";
+ 
+        if ($conn->query($sql) === TRUE) {
+            echo "<p>Player registered successfully!</p>";
+        } else {
+            echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
+        }
+    }
+ 
+    // Display all records
+    echo "<h2>All Records</h2>";
+    $sql_all_records = "SELECT * FROM players";
+    $result_all_records = $conn->query($sql_all_records);
+ 
+    if ($result_all_records->num_rows > 0) {
+        echo "<table border='1'><tr><th>Player ID</th><th>Player Name</th><th>Game Genre</th><th>Score</th></tr>";
+        // Output data of each row
+        while ($row = $result_all_records->fetch_assoc()) {
+            echo "<tr><td>" . $row["playerID"] . "</td><td>" . $row["playerName"] . "</td><td>" . $row["gameGenre"] . "</td><td>" . $row["score"] . "</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "<p>No records found.</p>";
+    }
+ 
+    // Display player with the highest score in cricket
+    echo "<h2>Highest Score in Cricket</h2>";
+    $sql_high_score = "SELECT playerName, score FROM players WHERE gameGenre = 'cricket' ORDER BY score DESC LIMIT 1";
+    $result_high_score = $conn->query($sql_high_score);
+ 
+    if ($result_high_score->num_rows > 0) {
+        // Output data of the player with the highest score in cricket
+        while ($row = $result_high_score->fetch_assoc()) {
+            echo "<p>Player with the highest score in cricket: " . $row["playerName"] . " (Score: " . $row["score"] . ")</p>";
+        }
+    } else {
+        echo "<p>No players registered for cricket yet.</p>";
+    }
+ 
+    // Close the connection
+    $conn->close();
+    ?>
+ 
+    <h2>Sports Registration Form</h2>
+ 
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <label for="playerName">Player Name:</label>
+        <input type="text" name="playerName" required><br>
+ 
+        <label for="gameGenre">Game Genre:</label>
+        <input type="text" name="gameGenre" required><br>
+ 
+        <label for="score">Score:</label>
+        <input type="number" name="score" required><br>
+ 
+        <button type="submit">Submit</button>
+    </form>
+ 
+</body>
+ 
+</html>
+ 
+ 
+SQL
+ 
+CREATE TABLE IF NOT EXISTS players (
+    playerID INT AUTO_INCREMENT PRIMARY KEY,
+    playerName VARCHAR(255) NOT NULL,
+    gameGenre VARCHAR(50) NOT NULL,
+    score INT NOT NULL
+);
+ 
+ 
+ 
+ 
+19. Design students admission form having the following fields 
+=[studentID,studentName,emailID,12thGrade,JEEScore, Department] 
+Write a PHP script to display top 5 students based on JEEScore enrolled to CSE department.
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+ 
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+ 
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <h2>Student Admission Form</h2>
+    <form method="post" action="">
+        Student ID: <input type="text" name="studentID" required><br>
+        Student Name: <input type="text" name="studentName" required><br>
+        Email ID: <input type="email" name="emailID" required><br>
+        12th Grade: <input type="text" name="12thGrade" required><br>
+        JEEScore: <input type="number" name="jeescore" required><br>
+        Department: <input type="text" name="department" required><br>
+        <input type="submit" value="Submit">
+    </form>
+ 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $studentID = $_POST["studentID"];
+        $studentName = $_POST["studentName"];
+        $emailID = $_POST["emailID"];
+        $grade12 = $_POST["12thGrade"];
+        $jeescore = $_POST["jeescore"];
+        $department = $_POST["department"];
+ 
+        $servername = "your_database_server";
+        $username = "your_username";
+        $password = "your_password";
+        $dbname = "your_database_name";
+ 
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+ 
+        // SQL query to insert student details into the admission_form table
+        $sql = "INSERT INTO admission_form (studentID, studentName, emailID, 12thGrade, JEEScore, Department)
+            VALUES ('$studentID', '$studentName', '$emailID', '$grade12', $jeescore, '$department')";
+ 
+        if ($conn->query($sql) === TRUE) {
+            echo "Student details inserted successfully!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+ 
+        $conn->close();
+    }
+    ?>
+ 
+    <h2>Top 5 Students in CSE Department</h2>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "mydb";
+ 
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+ 
+    // SQL query to select top 5 students with highest JEEScore in the CSE department
+    $sql = "SELECT studentID, studentName, emailID, 12thGrade, JEEScore
+        FROM admission_form
+        WHERE Department = 'CSE'
+        ORDER BY JEEScore DESC
+        LIMIT 5";
+ 
+    $result = $conn->query($sql);
+ 
+    // Display the result
+    if ($result->num_rows > 0) {
+        echo "<table>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Email ID</th>
+                <th>12th Grade</th>
+                <th>JEEScore</th>
+            </tr>";
+ 
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                <td>{$row['studentID']}</td>
+                <td>{$row['studentName']}</td>
+                <td>{$row['emailID']}</td>
+                <td>{$row['12thGrade']}</td>
+                <td>{$row['JEEScore']}</td>
+              </tr>";
+        }
+ 
+        echo "</table>";
+    } else {
+        echo "No records found";
+    }
+ 
+    $conn->close();
+    ?>
+ 
+</body>
+ 
+</html>
+ 
+<!-- SQL -->
+<!-- CREATE TABLE admission_form (
+    studentID INT PRIMARY KEY,
+    studentName VARCHAR(255),
+    emailID VARCHAR(255),
+    12thGrade VARCHAR(10),
+    JEEScore INT,
+    Department VARCHAR(50)
+);
+ 
+select * from admission_form
+INSERT INTO admission_form (studentID, studentName, emailID, 12thGrade, JEEScore, Department)
+VALUES
+(1, 'John Doe', 'john@example.com', 'A', 90, 'CSE'),
+(2, 'Jane Doe', 'jane@example.com', 'B', 95, 'CSE'),
+(3, 'Bob Smith', 'bob@example.com', 'A+', 92, 'CSE'),
+(4, 'Alice Johnson', 'alice@example.com', 'B+', 88, 'CSE'),
+(5, 'Charlie Brown', 'charlie@example.com', 'A', 94, 'CSE'),
+(6, 'Eve Green', 'eve@example.com', 'A', 91, 'ECE'),
+(7, 'David Lee', 'david@example.com', 'B+', 89, 'ECE'); -->
+ 
+ 
+ 
+20/23. Design a login page with CSS for a café administrator and display the welcome page with proper UI for the authentic users
+ 
+index.html
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Café Admin Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Café Admin Login</h2>
+        <form action="welcome.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+ 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+ 
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+ 
+ 
+ 
+ 
+ 
+styles.css
+ 
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+ 
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+h2 {
+    text-align: center;
+    color: #333;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+ 
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #45a049;
+}
+ 
+ 
+ 
+welcome.html
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to Café Admin Dashboard</title>
+ 
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome to Café Admin Dashboard</h2>
+        <!-- Add your content for the welcome page here -->
+    </div>
+</body>
+</html>
+ 
+ 
+21/22. 
+ 
+Create the database table with the entries mentioned: [rollNo, studName, studDept, 
+passingYear, classGrades] Grades should be either {First Class, Second Class, Pass}. Write a 
+PHP script to display the First class students from CSE department
+ 
+ 
+<?php
+ 
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "mydb";
+ 
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+ 
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+// Query to select First-class students from the CSE department
+$sql = "SELECT * FROM students WHERE studDept = 'CSE' AND classGrades = 'First Class'";
+$result = $conn->query($sql);
+ 
+// Display the results
+if ($result->num_rows > 0) {
+    echo "<h2>First-class students from CSE department:</h2>";
+    echo "<table border='1'>";
+    echo "<tr><th>Roll No</th><th>Student Name</th><th>Department</th><th>Passing Year</th><th>Class Grades</th></tr>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row["rollNo"] . "</td>";
+        echo "<td>" . $row["studName"] . "</td>";
+        echo "<td>" . $row["studDept"] . "</td>";
+        echo "<td>" . $row["passingYear"] . "</td>";
+        echo "<td>" . $row["classGrades"] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+} else {
+    echo "No first-class students found in the CSE department.";
+}
+ 
+// Close the connection
+$conn->close();
+ 
+?>
+<!-- create database mydb;
+use mydb;
+ 
+ 
+CREATE TABLE students (
+    rollNo INT PRIMARY KEY,
+    studName VARCHAR(255) NOT NULL,
+    studDept VARCHAR(50) NOT NULL,
+    passingYear INT NOT NULL,
+    classGrades VARCHAR(20) NOT NULL
+);
+INSERT INTO students (rollNo, studName, studDept, passingYear, classGrades)
+VALUES
+    (1, 'John Doe', 'CSE', 2022, 'First Class'),
+    (2, 'Jane Smith', 'CSE', 2022, 'Second Class'),
+    (3, 'Bob Johnson', 'ECE', 2022, 'Pass'),
+    (4, 'Alice Brown', 'CSE', 2022, 'First Class'),
+    (5, 'Charlie White', 'MECH', 2022, 'Pass');
+select *from students
+; -->
+ 
+ 
+ 
+ 
+ 
+24.Write a PHP script to take number from user and print the table of that number.
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+ 
+<h1>Multiplication Table Generator</h1>
+ 
+<!-- Form to input rows and columns -->
+<form id="form">
+  <label for="rows">Number of Rows:</label>
+  <input type="number" id="rows" min="1" value="5">
+  <br><br>
+ 
+  <label for="columns">Number of Columns:</label>
+  <input type="number" id="columns" min="1" value="5">
+  <br><br>
+ 
+  <button type="button" onclick="generateTable()">Generate Table</button>
+</form>
+ 
+<!-- Display area for the multiplication table -->
+<div id="tableContainer"></div>
+ 
+<script>
+function generateTable() {
+    var rows = parseInt(document.getElementById("rows").value);
+    var columns = parseInt(document.getElementById("columns").value);
+    var tableContainer = document.getElementById("tableContainer");
+ 
+    if (isNaN(rows) || isNaN(columns) || rows <= 0 || columns <= 0) {
+        tableContainer.innerHTML = "<p>Please enter valid positive numbers for rows and columns.</p>";
+        return;
+    }
+ 
+    var tableHTML = "<table>";
+    for (var i = 1; i <= rows; i++) {
+        tableHTML += "<tr>";
+        for (var j = 1; j <= columns; j++) {
+            tableHTML += "<td>" + (i * j) + "</td>";
+        }
+        tableHTML += "</tr>";
+    }
+    tableHTML += "</table>";
+ 
+    tableContainer.innerHTML = tableHTML;
+}
+</script>
+ 
+</body>
+</html>
+ 
+ 
+25.Write a program to check student grade based on the marks using if-else statement.
+Conditions:
+i. If marks are 60% or more, grade will be First Division.
+ii. If marks between 45% to 59%, grade will be Second Division.
+iii. If marks between 33% to 44%, grade will be Third Division.
+iv. If marks are less than 33%, student will be Fail.
+ 
+<!-- Grade checker with user input -->
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Grade Checker</title>
+</head>
+ 
+<body>
+ 
+    <form method="post" action="">
+        <label for="marks">Enter your marks:</label>
+        <input type="text" name="marks" id="marks" required>
+        <button type="submit">Check Grade</button>
+    </form>
+ 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve user input
+        $user_marks = $_POST["marks"];
+ 
+        // Validate user input (you may want to add more validation)
+        if (!is_numeric($user_marks)) {
+            echo "Please enter a valid numeric value for marks.";
+        } else {
+            // Convert input to a numeric value
+            $marks = (int)$user_marks;
+ 
+            // Grade checking logic
+            if ($marks >= 60) {
+                echo "First Division";
+            } elseif ($marks >= 45) {
+                echo "Second Division";
+            } elseif ($marks >= 33) {
+                echo "Third Division";
+            } else {
+                echo "Fail";
+            }
+        }
+    }
+    ?>
+ 
+</body>
+ 
+</html>
+ 
+ 
+ 
+26.
+Write a program to show day of the week (for example: Monday) based on numbers using 
+switch/case statements.
+Conditions:
+i. You can pass 1 to 7 number in switch
+ii. Day 1 will be considered as Monday
+iii. If number is not between 1 to 7, show invalid number in default
+ 
+ 
+<!-- HTML form to take user input -->
+<form method="get" action="">
+    <label for="dayNumber">Enter day number (1-7): </label>
+    <input type="text" name="dayNumber" id="dayNumber" required>
+    <input type="submit" value="Submit">
+</form>
+ 
+<!-- PHP code to convert the number to day -->
+<?php
+if (isset($_GET['dayNumber'])) {
+    $dayNumber = (int)$_GET['dayNumber'];
+ 
+    switch ($dayNumber) {
+        case 1:
+            echo "Monday";
+            break;
+        case 2:
+            echo "Tuesday";
+            break;
+        case 3:
+            echo "Wednesday";
+            break;
+        case 4:
+            echo "Thursday";
+            break;
+        case 5:
+            echo "Friday";
+            break;
+        case 6:
+            echo "Saturday";
+            break;
+        case 7:
+            echo "Sunday";
+            break;
+ 
+        default:
+            echo "Invalid number";
+    }
+}
+?>
+ 
+ 
+ 
+ 
+27. Write a PHP program to find factorial of a number using recursive function. Take Input via Prompt function and show output on browser screen
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+ 
+    <?php
+        // Function to calculate factorial recursively
+        function calculateFactorial($number) {
+            if ($number <= 1) {
+                return 1;
+            } else {
+                return $number * calculateFactorial($number - 1);
+            }
+        }
+ 
+        // Check if the form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Get the input from the form
+            $userInput = $_POST["number"];
+ 
+            // Validate the input (ensure it's a non-negative integer)
+            if (ctype_digit($userInput) && $userInput >= 0) {
+                // Calculate the factorial
+                $result = calculateFactorial($userInput);
+ 
+                // Display the result
+                echo "<p>The factorial of $userInput is: $result</p>";
+            } else {
+                // Display an error message for invalid input
+                echo "<p>Please enter a non-negative integer.</p>";
+            }
+        }
+    ?>
+ 
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="number">Enter a non-negative integer:</label>
+        <input type="text" name="number" id="number" required>
+        <button type="submit">Calculate Factorial</button>
+    </form>
+</body>
+</html>
+ 
+ 
+ 
+ 
+28.Write a program to calculate Electricity bill in PHP
+Conditions:
+i. For first 50 units – Rs. 3.50/unit
+ii. For next 100 units – Rs. 4.00/unit
+iii. For next 100 units – Rs. 5.20/unit
+iv. For units above 250 – Rs. 6.50/unit
+ 
+ 
+ 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the form is submitted
+    $unitsConsumed = isset($_POST["units"]) ? $_POST["units"] : 0;
+    $billAmount = calculateElectricityBill($unitsConsumed);
+} else {
+    // Default value if the form is not submitted
+    $unitsConsumed = 0;
+    $billAmount = 0;
+}
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <h1>Electricity Bill Calculator</h1>
+ 
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="units">Enter the number of units consumed:</label>
+        <input type="number" name="units" id="units" value="<?php echo $unitsConsumed; ?>" required>
+        <input type="submit" value="Calculate">
+    </form>
+ 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "<p>Total electricity bill for $unitsConsumed units: Rs. $billAmount</p>";
+    }
+    ?>
+</body>
+</html>
+ 
+<?php
+function calculateElectricityBill($units) {
+    $totalBill = 0;
+ 
+    if ($units <= 50) {
+        $totalBill = $units * 3.50;
+    } elseif ($units <= 150) {
+        $totalBill = (50 * 3.50) + (($units - 50) * 4.00);
+    } elseif ($units <= 250) {
+        $totalBill = (50 * 3.50) + (100 * 4.00) + (($units - 150) * 5.20);
+    } else {
+        $totalBill = (50 * 3.50) + (100 * 4.00) + (100 * 5.20) + (($units - 250) * 6.50);
+    }
+ 
+    return $totalBill;
+}
+?>
+ 
+ 
+ 
+ 
+29. Write a PHP program to find Square Root of a number using PHP function. Take Input via 
+Textbox and show output on browser screen
+ 
+Squareee root with input
+ 
+<!-- Square root -->
+<?php
+if(isset($_POST['number'])) {
+    $number = $_POST['number'];
+    echo "Square Root: " . sqrt($number);
+}
+?>
+ 
+<form method="post" action="">
+    Enter a number: <input type="text" name="number">
+    <input type="submit" value="Calculate Square Root">
+</form>
+ 
+ 
+ 
+30.  Write a PHP Script with function to check whether a number is prime or not.
+Note: A prime number (or a prime) is a natural number greater than 1 that has no positive 
+divisors other than 1 and itself
+ 
+ 
+<!-- Prime num form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime Number</title>
+</head>
+<body>
+    <form method="post" action="">
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Check Prime</button>
+    </form>
+ 
+    <?php
+    function isPrime($num) {
+        if ($num <= 1) {
+            return false;
+        }
+        for ($i = 2; $i <= sqrt($num); $i++) {
+            if ($num % $i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+ 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $userInput = isset($_POST['number']) ? $_POST['number'] : '';
+ 
+        if (is_numeric($userInput)) {
+            $number = (int)$userInput;
+ 
+            if (isPrime($number)) {
+                echo "$number is a prime number";
+            } else {
+                echo "$number is not a prime number";
+            }
+        } else {
+            echo "Please enter a valid number.";
+        }
+    }
+    ?>
+</body>
+</html>
+ 
+ 
+ 
+ 
+ 
+31.Write a PHP function script that checks whether a passed string is a palindrome or not?
+(Take Input Through Textbox and Display result on Client Browser screen)
+ 
+ 
+<!-- Palindrome -->
+<?php
+function isPalindrome($str) {
+    $str = strtolower(str_replace(' ', '', $str));
+    return $str == strrev($str);
+}
+ 
+if(isset($_POST['text'])) {
+    $text = $_POST['text'];
+    if (isPalindrome($text)) {
+        echo "$text is a palindrome";
+    } else {
+        echo "$text is not a palindrome";
+    }
+}
+?>
+ 
+<form method="post" action="">
+    Enter a string: <input type="text" name="text">
+    <input type="submit" value="Check Palindrome">
+</form>
+ 
+ 
+32 Write a PHP script to : -
+a) transform a string all uppercase letters.
+b) transform a string all lowercase letters.
+c) make a string's first character uppercase.
+d) make a string's first character of all the words uppercase.
+ 
+ 
+<!-- string manipulation -->
+<?php
+if(isset($_POST['text'])) {
+    $text = $_POST['text'];
+    echo "Uppercase: " . strtoupper($text) . "<br>";
+    echo "Lowercase: " . strtolower($text) . "<br>";
+    echo "First character uppercase: " . ucfirst($text) . "<br>";
+    echo "First character of all words uppercase: " . ucwords($text);
+}
+?>
+ 
+<form method="post" action="">
+    Enter a string: <input type="text" name="text">
+    <input type="submit" value="Transform Text">
+</form>
+ 
+ 
+ 
+ 
+33. Write a PHP program to compute and return the square root of a given number
+ 
+ 
+<!-- Square root -->
+<?php
+if(isset($_POST['number'])) {
+    $number = $_POST['number'];
+    echo "Square Root: " . sqrt($number);
+}
+?>
+ 
+<form method="post" action="">
+    Enter a number: <input type="text" name="number">
+    <input type="submit" value="Calculate Square Root">
+</form>
+ 
+ 
+ 
+ 
+34.A) Write a PHP program to reverse the digits of an integer.
+B) Write a PHP program to check whether a given positive integer is a power of four.
+ 
+<!-- Reverse integer -->
+<?php
+if(isset($_POST['number'])) {
+    $number = $_POST['number'];
+    echo "Reversed number: " . strrev($number);
+}
+?>
+ 
+<form method="post" action="">
+    Enter an integer: <input type="text" name="number">
+    <input type="submit" value="Reverse Digits">
+</form>
+ 
+ 
+ 
+<!-- Check Power of Four -->
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Power of Four Checker</title>
+</head>
+<body>
+    <h2>Power of Four Checker</h2>
+ 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $number =($_POST['number']);
+ 
+        if (($number > 0) && (($number & ($number - 1)) == 0) && (($number - 1) % 3 == 0)) {
+            echo "$number is a power of four";
+        } else {
+            echo "$number is not a power of four";
+        }
+    }
+    ?>
+ 
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Enter a number: <input type="text" name="number">
+        <input type="submit" value="Check Power of Four">
+    </form>
+</body>
+</html>
+ 
+ 
+ 
+ 
+ 
+35. Write a PHP Function script to accept Temperature from user in Fahrenheit and convert it 
+degree Celsius and Vice Versa with both separate output on browser screen.
+ 
+<!-- Temperature Conversion -->
+ 
+<?php
+function convertTemperature($temp, $unit) {
+    if ($unit == "celsius") {
+        $result = ($temp - 32) * 5/9;
+        return "Temperature in Celsius: " . round($result, 2) . "°C";
+    } elseif ($unit == "fahrenheit") {
+        $result = ($temp * 9/5) + 32;
+        return "Temperature in Fahrenheit: " . round($result, 2) . "°F";
+    } else {
+        return "Invalid unit";
+    }
+}
+ 
+if(isset($_POST['temperature']) && isset($_POST['unit'])) {
+    $temperature = $_POST['temperature'];
+    $unit = $_POST['unit'];
+    echo convertTemperature($temperature, $unit);
+}
+?>
+ 
+<form method="post" action="">
+    Enter temperature: <input type="text" name="temperature">
+    <select name="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select>
+    <input type="submit" value="Convert Temperature">
+</form>
+ 
+ 
+ 
+ 
+36.Write a PHP Script to Add the following filed in Student Table with database connection:
+i. Roll Number
+ii. Name
+iii. City
+iv. Pin Code
+Show the Result on Browser Screen through Display Record button
+ 
+ 
+ 
+ <!-- SHOW RECORDS FROM TABLE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "mydb";
+ 
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+ 
+    // Check if form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve records from the Student table
+        $sql = "SELECT * FROM Student";
+        $result = $conn->query($sql);
+ 
+        if ($result->num_rows > 0) {
+            echo "<h2>Student Records</h2>";
+            echo "<table>";
+            echo "<tr><th>Roll Number</th><th>Name</th><th>City</th><th>Pin Code</th></tr>";
+ 
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<tr><td>".$row["roll_number"]."</td><td>".$row["name"]."</td><td>".$row["city"]."</td><td>".$row["pin_code"]."</td></tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results found";
+        }
+    }
+ 
+    // Close connection
+    $conn->close();
+    ?>
+ 
+    <form method="post">
+        <input type="submit" class="button" value="Display Records">
+    </form>
+</body>
+</html>
+ 
+ 
+CREATE TABLE Student (
+    roll_number INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    city VARCHAR(255),
+    pin_code VARCHAR(10)
+);
+ 
+INSERT INTO Student (roll_number, name, city, pin_code) VALUES
+    (1, 'John Doe', 'New York', '10001'),
+    (2, 'Jane Smith', 'Los Angeles', '90001'),
+    (3, 'Bob Johnson', 'Chicago', '60601');
+ 
+ 
+ 
+37. Write a PHP script Add Record in Employee Table with Database connection:
+i. EMP No
+ii. Name
+iii. Department
+iv. Salary
+ Display Result of Employee having Salary Greater than 50000 Rs per month
+ 
+ 
+ 
+<!-- ADD RECORD TO TABLE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+ 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+ 
+        form {
+            margin-bottom: 20px;
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+ 
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+ 
+        button:hover {
+            background-color: #45a049;
+        }
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+ 
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+ 
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Employee Record</h2>
+        <form method="post">
+            <label>EMP No:</label>
+            <input type="text" name="emp_no" required><br>
+            <label>Name:</label>
+            <input type="text" name="name" required><br>
+            <label>Department:</label>
+            <input type="text" name="department" required><br>
+            <label>Salary:</label>
+            <input type="number" name="salary" required><br>
+            <button type="submit">Add Employee</button>
+        </form>
+ 
+        <?php
+        // Database connection
+        $host = "localhost";
+        $username = "root";
+        $password = "root";
+        $database = "php15";
+ 
+        $conn = new mysqli($host, $username, $password, $database);
+ 
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+ 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $emp_no = $_POST['emp_no'];
+            $name = $_POST['name'];
+            $department = $_POST['department'];
+            $salary = $_POST['salary'];
+ 
+            $sql = "INSERT INTO Employee (emp_no, name, department, salary) VALUES ('$emp_no', '$name', '$department', '$salary')";
+ 
+            if ($conn->query($sql) === TRUE) {
+                echo "Record added successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+ 
+        // Display employees with salary greater than 50000 Rs
+        $result = $conn->query("SELECT * FROM Employee WHERE salary > 50000");
+ 
+        echo '<h2>Employees with Salary > 50000 Rs</h2>';
+        echo '<table>';
+        echo '<tr><th>EMP No</th><th>Name</th><th>Department</th><th>Salary</th></tr>';
+        while ($row = $result->fetch_assoc()) {
+            echo '<tr><td>' . $row['emp_no'] . '</td><td>' . $row['name'] . '</td><td>' . $row['department'] . '</td><td>' . $row['salary'] . '</td></tr>';
+        }
+        echo '</table>';
+ 
+        // Close the database connection
+        $conn->close();
+        ?>
+    </div>
+</body>
+</html>
+ 
+<!-- 
+ 
+        SQL
+ 
+ 
+CREATE TABLE Employee (
+    emp_no INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary INT NOT NULL
+);
+ -->
+ 
+ 
+ 
+38. 
+Write a PHP script Add Record in Users Table with Database Connection:
+i. User id
+ii. User Name
+iii. Password
+ Update the User Password using update option on browser screen and show updated resul
+ 
+ 
+ 
+ 
+<?php
+$hostname = 'localhost';
+$username = 'root';
+$password = 'root';
+$database_name = 'mydb';
+ 
+$conn = new mysqli($hostname, $username, $password, $database_name);
+ 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+function addUser($userId, $userName, $password)
+{
+    global $conn;
+    $sql = "INSERT INTO Users (user_id, user_name, password) VALUES ('$userId', '$userName', '$password')";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record added successfully<br>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+ 
+function updateUserPassword($userId, $newPassword)
+{
+    global $conn;
+    $sql = "UPDATE Users SET password='$newPassword' WHERE user_id='$userId'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Password updated successfully<br>";
+    } else {
+        echo "Error updating password: " . $conn->error;
+    }
+}
+ 
+// Check if form is submitted for adding a new user
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userId = isset($_POST['user_id']) ? $_POST['user_id'] : null;
+    $userName = $_POST['user_name'];
+    $password = $_POST['password'];
+ 
+    if ($userId !== null) {
+        addUser($userId, $userName, $password);
+    } else {
+        echo "User ID not provided";
+    }
+}
+ 
+// Check if form is submitted for updating user password
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+    $newPassword = isset($_GET['new_password']) ? $_GET['new_password'] : null;
+ 
+    if ($userId !== null && $newPassword !== null) {
+        updateUserPassword($userId, $newPassword);
+    } else {
+        echo "User ID or New Password not provided";
+    }
+}
+ 
+// Retrieve and display all records from the Users table
+$sql = "SELECT * FROM Users";
+$result = $conn->query($sql);
+ 
+echo "<h2>Users Table</h2>";
+ 
+if ($result->num_rows > 0) {
+    echo "<table border='1'><tr><th>User ID</th><th>User Name</th><th>Password</th></tr>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["user_id"] . "</td><td>" . $row["user_name"] . "</td><td>" . $row["password"] . "</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results found";
+}
+ 
+$conn->close();
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+ 
+        form {
+            margin-bottom: 20px;
+        }
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+ 
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+ 
+        th {
+            background-color: #f2f2f2;
+        }
+ 
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h2>Add User</h2>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        User ID: <input type="text" name="user_id"><br>
+        User Name: <input type="text" name="user_name"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Add User">
+    </form>
+ 
+    <h2>Update Password</h2>
+    <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        User ID: <input type="text" name="user_id"><br>
+        New Password: <input type="password" name="new_password"><br>
+        <input type="submit" value="Update Password">
+    </form>
+</body>
+ 
+</html>
+ 
+ 
+ 
+ 
