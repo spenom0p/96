@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Admin Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .welcome-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .welcome-message {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        .logout-button {
+            margin-top: 20px;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-container">
+        <h2>Café Admin Login</h2>
+        <form id="loginForm" onsubmit="return authenticateUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="welcome-container" id="welcomeContainer">
+        <h2>Welcome, Café Admin!</h2>
+        <p class="welcome-message">You are now logged in.</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<script>
+    function authenticateUser() {
+        // In a real-world scenario, you would perform server-side authentication here.
+        // For simplicity, let's use a basic check for the sake of this example.
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'admin' && password === 'admin123') {
+            // Successful login
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('welcomeContainer').style.display = 'flex';
+            return false; // Prevent form submission
+        } else {
+            alert('Invalid username or password. Please try again.');
+            return false; // Prevent form submission
+        }
+    }
+
+    function logout() {
+        document.getElementById('loginForm').style.display = 'flex';
+        document.getElementById('welcomeContainer').style.display = 'none';
+    }
+</script>
+
+</body>
+
+<!--
+    Code in PHP aas well
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Admin Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .welcome-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .welcome-message {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        .logout-button {
+            margin-top: 20px;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<?php
+// PHP script for authentication
+
+// Initialize variables
+$username = '';
+$password = '';
+$errorMessage = '';
+
+// Check if form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get user input
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Hardcoded username and password (for demonstration purposes)
+    $correctUsername = 'admin';
+    $correctPassword = 'admin123';
+
+    // Check if the entered credentials are correct
+    if ($username === $correctUsername && $password === $correctPassword) {
+        // Successful login
+        displayWelcomePage();
+        exit(); // Stop script execution
+    } else {
+        $errorMessage = 'Invalid username or password. Please try again.';
+    }
+}
+?>
+
+<div class="container">
+    <div class="login-container">
+        <h2>Café Admin Login</h2>
+        <form method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <?php if ($errorMessage): ?>
+            <p style="color: #ff0000;"><?php echo $errorMessage; ?></p>
+        <?php endif; ?>
+    </div>
+
+    <div class="welcome-container" id="welcomeContainer">
+        <h2>Welcome, Café Admin!</h2>
+        <p class="welcome-message">You are now logged in.</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<script>
+    function logout() {
+        document.getElementById('welcomeContainer').style.display = 'none';
+        document.querySelector('form').reset();
+        document.querySelector('.login-container').style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>
+
+<?php
+function displayWelcomePage() {
+    echo '<div class="container">
+            <div class="welcome-container" id="welcomeContainer">
+                <h2>Welcome, Café Admin!</h2>
+                <p class="welcome-message">You are now logged in.</p>
+                <button class="logout-button" onclick="logout()">Logout</button>
+            </div>
+          </div>';
+}
+?>
+
+-->
+</html>
+
+

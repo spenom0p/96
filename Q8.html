@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+</head>
+
+<body>
+    <h1>Multiplication Table</h1>
+    <p>Enter the number of rows:</p>
+    <input type="number" id="rowsInput">
+    <p>Enter the number of columns:</p>
+    <input type="number" id="columnsInput">
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="tableContainer"></div>
+
+    <script>
+        function generateTable() {
+            var rows = parseInt(document.getElementById('rowsInput').value);
+            var columns = parseInt(document.getElementById('columnsInput').value);
+
+            if (rows < 1 || columns < 1) {
+                alert('Please enter positive values for rows and columns.');
+                return;
+            }
+
+            var tableHTML = '<table>';
+
+            for (var i = 1; i <= rows; i++) {
+                tableHTML += '<tr>';
+
+                for (var j = 1; j <= columns; j++) {
+                    var product = i * j;
+                    tableHTML += '<td>' + product + '</td>';
+                }
+
+                tableHTML += '</tr>';
+            }
+
+            tableHTML += '</table>';
+
+            document.getElementById('tableContainer').innerHTML = tableHTML;
+        }
+    </script>
+</body>
+
+</html>

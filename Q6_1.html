@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Largest Number</title>
+</head>
+<body>
+    <h1>Finding largest among three numbers</h1>
+
+    <script>
+        var num1=parseFloat(prompt("Enter the first number:"));
+        var num2=parseFloat(prompt("Enter the second number:"));
+        var num3=parseFloat(prompt("Enter the three number:"));
+        var result=num1;
+
+        if(num2>result)
+        {
+            result=num2;
+        }
+        if(num3>result)
+        {
+            result=num3;
+        }
+        document.write("<p> Largest Number is : " +result+ "</p>");
+
+    </script>
+</body>
+</html>

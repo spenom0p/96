@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var input = prompt("Enter numbers in an Array (comma ',' separated)");
+        var inputArr = input.split(",").map(function(item){
+            return parseInt(item.trim());
+        });
+
+        document.write("Entered Array: "+inputArr + "<br>");
+
+        var sorted = inputArr.slice();
+        sorted.sort(function(a,b){
+            return a-b;
+        });
+        document.write("Ascending order: "+sorted+"<br>");
+        
+        inputArr.push(25);
+        document.write("Updated Array: " + inputArr + "<br>");
+        
+        var length = inputArr.length;
+        document.write("Array length: " + length + "<br>");
+
+        document.write("Element at position 3: "+inputArr[3]+"<br>");
+
+        
+    </script>
+</body>

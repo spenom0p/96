@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append Row to Table</title>
+</head>
+<body>
+    <style>
+        tr,td,th{
+            padding: 16px 15px ;
+        }
+    </style>
+    <h1>Append Row to Table</h1>
+
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <button id="addRowButton">Add Row</button>
+
+    <script>
+        // Get references to the table and the button
+        var table = document.getElementById("myTable");
+        var addButton = document.getElementById("addRowButton");
+
+        // Add event listener to the button
+        addButton.addEventListener("click", function() {
+            // Prompt for name and age
+            var name = prompt("Enter Name:");
+            var age = prompt("Enter Age:");
+
+            // Create a new row
+            var newRow = document.createElement("tr");
+            
+            // Create new cells for the row
+            var nameCell = document.createElement("td");
+            var ageCell = document.createElement("td");
+            
+            // Set the cell content
+            nameCell.textContent = name;
+            ageCell.textContent = age;
+            
+            // Append cells to the row
+            newRow.appendChild(nameCell);
+            newRow.appendChild(ageCell);
+            
+            // Append the row to the table
+            table.appendChild(newRow);
+        });
+    </script>
+</body>
+</html>

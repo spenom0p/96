@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            max-width: 600px;
+            margin: 0 auto ;
+            padding: 10px;
+            box-shadow: 0 0 10px;
+            border-radius: 20px;
+        }
+        input{
+            border-radius: 10px;
+            border-style: solid;
+        }
+
+        h2{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        button[type='submit']{
+            cursor: pointer;
+        }
+        button[type='submit']:hover{
+            cursor: pointer;
+        }
+        #success-message{
+            display: none;
+            color: rgb(0, 192, 42);
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Company Registration Form</h2>
+        <form id="registration-form">
+            <label for="name">Name:</label>
+            <input type="text">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text">
+            <br>
+            <label for="phno">Phone no:</label>
+            <input type="number">
+            <br>
+            <label for="industry">Industry:</label>
+            <select name="industry" id="industry">
+                <option value="it">IT</option>
+                <option value="it">CS</option>
+                <option value="it">ECE</option>
+                <option value="it">Mech</option>
+            </select>
+            <br>
+            <input type="submit" id="submit">
+        </form>
+        <div id="success-message">Form Submitted Successfully</div>
+    </div>
+
+    <script>
+        const form = document.getElementById('registration-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            successMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .flower {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .flower-item {
+            width: 30%;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .in-stock {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Flower Shop</h1>
+    </header>
+
+    <section>
+        <h2>Available Flowers</h2>
+        <div class="flower">
+            <div class="flower-item">
+                <img src="rose.jpg" alt="Rose">
+                <h3>Rose</h3>
+                <p class="in-stock">In Stock: 50</p>
+            </div>
+
+            <div class="flower-item">
+                <img src="tulip.jpg" alt="Tulip">
+                <h3>Tulip</h3>
+                <p class="in-stock">In Stock: 30</p>
+            </div>
+
+            <div class="flower-item">
+                <img src="daisy.jpg" alt="Daisy">
+                <h3>Daisy</h3>
+                <p class="in-stock">In Stock: 40</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Flower Shop. All rights reserved.
+    </footer>
+</body>
+
+</html>

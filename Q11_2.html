@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traiangle</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Enter the side 1 of the triangle: "));
+        var b = parseFloat(prompt("Enter the side 2 of the triangle: "));
+        var c = parseFloat(prompt("Enter the side 3 of the triangle: "));
+
+        var s = (a+b+c)/2;
+
+        var area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+
+        document.write("Area of the traingle is: "+ area);
+    </script>
+</body>
+</html>
